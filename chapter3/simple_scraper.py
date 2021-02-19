@@ -15,7 +15,5 @@ def getLinks(wiki_article_url):
     # parse it through BeatifulSoup
     bs = BeautifulSoup(html, 'html.parser')
 
-   return bs.find('div', {'id': 'bodyContent'}).findAll(
-        'a', href = re.compile('^(/wiki/)((?!:).)*$')
-    )
-
+    return bs.find('div', {'id': 'bodyContent'}).findAll(
+        'a', href = re.compile('^(/wiki/)((?!:).)*$'))
